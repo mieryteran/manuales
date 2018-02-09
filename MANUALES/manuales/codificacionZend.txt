@@ -1,0 +1,192 @@
+<?php solo inicio
+Para archivos que contengan únicamente código PHP , la etiqueta de cierre ("?>") no está permitida. No es requerida por PHP , y omitirla evita la inyección de espacios en blanco en la respuesta.
+  ___________________________________________________________________________________________________________________________
+
+La identación suele estar compuesta por 4 espacios. Las tabulaciones no están permitidas.
+  ___________________________________________________________________________________________________________________________
+
+ El tamaño máximo de cualquier línea de código PHP es de 120 caracteres.
+  ___________________________________________________________________________________________________________________________
+
+ Zend Framework se estandariza una convencion de nombres de clases donde los nombres de las clases apuntan directamente a las carpetas en las que estan contenidas. La carpeta raiz de la biblioteca estandar de Zend Framework es la carpeta "Zend/"
+  ___________________________________________________________________________________________________________________________
+
+  Los nombres de las clases abstractas o interfaces deben acabar con el término, "Abstract", y ese término no debe ser precedida por un guión bajo. Ejemplo, Zend_Controller_Plugin_Abstract es considerado un nombre no válido, pero Zend_Controller_PluginAbstract, Zend_Controller_PluginInterface
+  ___________________________________________________________________________________________________________________________
+
+  metodos y variables , atrubutos = camelCase
+  ___________________________________________________________________________________________________________________________
+
+  Las cadenas deben ser concatenadas usando el operador punto ("."). Un espacio debe añadirse siempre antes y después del operador "." para mejorar la legibilidad
+
+  $sql = "SELECT `id`, `name` FROM `people` "
+       . "WHERE `name` = 'Susan' "
+       . "ORDER BY `name` ASC ";
+  ___________________________________________________________________________________________________________________________
+
+´´ apostrofos
+
+$sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
+  ___________________________________________________________________________________________________________________________
+
+ Al declarar arrays indexados con la función array , un espacio de separación deben añadirse después de cada coma, para mejorar la legibilidad:
+
+$sampleArray = array(1, 2, 3, 'Zend', 'Studio');
+
+
+
+$sampleArray = array(1, 2, 3, 'Zend', 'Studio',
+                     $a, $b, $c,
+                     56.44, $d, 500);
+
+$sampleArray = array(
+    1, 2, 3, 'Zend', 'Studio',
+    $a, $b, $c,
+    56.44, $d, 500,
+);
+
+
+
+$sampleArray = array('firstKey'  => 'firstValue',
+                     'secondKey' => 'secondValue');
+
+$sampleArray = array(
+    'firstKey'  => 'firstValue',
+    'secondKey' => 'secondValue',
+);
+  ___________________________________________________________________________________________________________________________
+  CLASES 
+
+
+  La llave "{" deberá escribirse siempre en la línea debajo del nombre de la clase ("one true brace"). 
+  Cada clase debe contener un bloque de documentación acorde con el estándar de PHPDocumentor.
+  Todo el código contenido en una clase debe ser separado con cuatro espacios. 
+
+/**
+* Bloque de Documentación aquí
+*/
+class SampleClass
+{
+    // el contenido de la clase
+    // debe separarse con cuatro espacios
+}
+
+MULTIPLES INTERFACES
+
+class SampleClass
+    implements BarInterface,
+               BazInterface
+{
+}
+  ___________________________________________________________________________________________________________________________
+FUNCIONES Y METODOS
+
+**
+ * Bloque de Documentación aquí
+ */
+class Foo
+{
+    /**
+     * Bloque de Documentación aquí
+     */
+    public function bar()
+    {
+        // el contenido de la función
+        // debe separarse con cuatro espacios
+    }
+}
+
+threeArguments(1, 2, 3);
+  ___________________________________________________________________________________________________________________________
+  SENTENCIAS DE CONTROL
+
+if ($a != 2) {
+    $a = 2;
+}
+
+if ($a != 2) {
+    $a = 2;
+} elseif ($a == 3) {
+    $a = 4;
+} else {
+    $a = 7;
+}
+
+switch ($numPeople) {
+    case 1:
+        break;
+
+    case 2:
+        break;
+
+    default:
+        break;
+}
+
+
+  ___________________________________________________________________________________________________________________________
+
+  DOCUMENTACION 
+
+  	ARCHIVO
+
+   Cada archivo que contenga código PHP debe tener un bloque de documentación al principio del archivo que contenga como mínimo las siguientes etiquetas phpDocumentor:
+
+/**
+ * Descripción corta del fichero
+ *
+ * Descripción larga del fichero (si la hubiera)...
+ *
+ * LICENSE: Some license information
+ *
+ * @category   Zend
+ * @package    Zend_Magic
+ * @subpackage Wand
+ * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @license    http://framework.zend.com/license   BSD License
+ * @version    $Id:$
+ * @link       http://framework.zend.com/package/PackageName
+ * @since      File available since Release 1.5.0
+*/
+
+	CLASE
+
+	/**
+ * Descripción corta de la clase
+ *
+ * Descripcion larga de la clase (si la hubiera)...
+ *
+ * @category   Zend
+ * @package    Zend_Magic
+ * @subpackage Wand
+ * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @license    http://framework.zend.com/license   BSD License
+ * @version    Release: @package_version@
+ * @link       http://framework.zend.com/package/PackageName
+ * @since      Class available since Release 1.5.0
+ * @deprecated Class deprecated in Release 2.0.0
+ */
+
+FUNCIONES
+
+ Cada función, incluyendo métodos de objeto, debe contener un bloque de documentación que contenga como mínimo:
+
+    Una descripción de la función
+
+    Todos los argumentos
+
+    Todos los posibles valores de retorno
+
+  ___________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+

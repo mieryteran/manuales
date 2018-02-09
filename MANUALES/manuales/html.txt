@@ -1,0 +1,328 @@
+
+	<td>citas (Quotations) q , abbr , blockquote, address, cite, bdo</td>
+	<td> comillas dobles, <abbr title="abreviaritos">breviaturas</abbr> <br> blockquote cite="http://www.worldwildlife.org/who/index.html"
+For 50 years, WWF has been protecting the future of nature.
+The world's leading conservation organization,
+WWF works in 100 countries and is supported by
+1.2 million members in the United States and
+close to 5 million globally.
+/blockquote , direccion, cite, bdo dir="rtl" This text will be written from right to left /bdo
+</td>
+	<td></td>
+</tr>
+<tr>
+	<td>elementos ins, del,  mark, sub, sup </td>
+	<td> elementos de <ins>insertado</ins> ,<del>eliminado</del> ,<mark>marca</mark> ,su<sup>per</sup>rior ,in<sub>fe</sub>rior </td>
+	<td></td>
+</tr>
+<tr>
+	<td> a correos</td>
+	<td>a href="mailto:diego1@gmail.com?
+subject=aquí el título&cc=diego2@gmail.com&bcc=diego3@gmail.com&body=Este 
+es el cuerpo">Enviar mail.</a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>ancla en la misma pagina o otra (crear marcadores)</td>
+	<td>
+	a href="#introduccion">Introducción a <br>
+	a href="html_demo.html#C4">Introducción a otra pagina y capitulo<br>
+	a id="introduccion" or name="introduccion"></a
+	</td>
+	<td></td>
+</tr>
+<tr>
+	<td>caption </td>
+	<td> titulo para usar en table otros </td>
+	<td></td>
+</tr>
+<tr>
+	<td>caracarteres especiales (ENTIDADES,SIMBOLOS)</td>
+	<td>    
+		<    & lt;
+		>    & gt;
+		&    & amp;
+		     & nbsp;     //Espacio en blanco.
+		©    & copy;
+		€    & euro;
+		&dollar;    & dollar;
+		</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selecion multiple</td>
+	<td>select name="colores[]" size="4" multiple</td>
+	<td></td>
+</tr>
+<tr>
+	<td>agrupacion de opciones</td>
+	<td>
+	optgroup label="Frutas"
+	option value="1">Naranjas/option
+	option value="2">Manzanas/option
+	/optgroup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>formulario button</td>
+	<td>
+	button type="submit" Enviar img src="enviar.gif" alt="envio" /button
+	button type="reset" Borrar img src="borrar.gif" alt="borrado"/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>orden de foco de controles (tab)</td>
+	<td>tabindex="1"</td>
+	<td></td>
+</tr>
+<tr>
+	<td>formulario email</td>
+	<td>form action="mailto:reclamos@gmail.com" method="post" enctype="text/plain"</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label titulo a los controles del formulario</td>
+	<td>
+	label for="nombre"Ingrese su nombre:/label
+	input type="text" name="nombre" size="20" id="nombre"</td>
+	<td></td>
+</tr>
+<tr>
+	<td>iframe</td>
+	<td>iframe src="pagina2.html" width="400" height="200"
+
+	 iframe src="demo_iframe.htm" name="iframe_a" /iframe
+
+	 p a href="https://www.w3schools.com" target="iframe_a" W3Schools.com /a /p
+	 </td>
+	<td></td>
+</tr>
+<tr>
+	<td>marcador de posición Atributo</td>
+	<td>placeholder="First name"</td>
+	<td></td>
+</tr>
+<tr>
+	<td> meta Contenido de la cabecera de la página (ayudan al motor de busqueda)</td>
+	<td>meta name="keywords" content="html, programación, webmaster"
+	 meta charset="UTF-8"
+	 meta name="description" content="Free Web tutorials"
+	 meta name="keywords" content="HTML,CSS,XML,JavaScript"
+	 meta name="author" content="John Doe"
+
+	 visualizacion Varía con el dispositivo
+	 meta name="viewport" content="width=device-width, initial-scale=1.0" <- 1,0 parte establece el nivel de zoom inicial cuando la página se carga primero por el navegador.
+
+
+
+	 especifica la URL base y meta de base para todas las URLs relativas en una página:
+	 base href="https://www.w3schools.com/images/" target="_blank"
+	 a href="https://www.w3schools.com">W3Schools /a cargan target
+	 </td>
+	<td></td>
+</tr>
+<tr>
+	<td>upload de archivos al servidor es inicializar la propiedad enctype del elemento form</td>
+	<td>enctype="multipart/form-data", enctype="text/plain" </td>
+	<td></td>
+</tr>
+<tr>
+	<td>navegadores, sistemas de traducción , los motores de búsqueda y aplicaciones</td>
+	<td>encabezados, metas, enfatizaciones, citas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mapeo de imagenes</td>
+	<td>img src="planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;"
+
+map name="planetmap"
+  area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm"
+  area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm"
+  area shape="circle" coords="124,58,10" alt="Venus" href="venus.htm"
+/map</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tablas estilos pares y impares</td>
+	<td>table#t01 tr:nth-child(even) {
+    background-color: red;
+}
+table#t01 tr:nth-child(odd) {
+}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>tabla definir color varias columnas</td>
+	<td> colgroup
+    col span="2" style="background-color:red"
+    col style="background-color:yellow"
+  /colgroup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>elementos para especificar cada parte de una tabla (cuerpo, encabezado, pie)</td>
+	<td> 
+	thead agrupar cabecera 
+	tbody agrupar contenido 
+	tfoot agrupar pie
+	td 
+	border-collapse :collapse; unir celdas
+	</td>
+</tr>
+<tr>
+	<td>listas descriptivas,normales</td>
+	<td>
+dl
+  dt Coffee/dt
+  dd - black hot drink/dd
+  dt Milk</dt>
+  dd>- white cold drink/dd
+/dl
+
+ ol type="i,1,A"
+  li Coffee /li 
+  li Tea /li 
+  li Milk /li 
+/ol  
+
+</td>
+	<td></td>
+</tr>
+<tr>
+	<td>COMPUTERCODE code, entrada de teclado,  salida de un programa o sistema informático,expresión matemática</td>
+	<td>
+	 <code>
+x = 5;<br>
+y = 6;<br>
+z = x + y;,
+<kbd>Ctrl + S</kbd>,
+<samp>Error!</samp>,
+Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>
+</code> 
+	</td>
+	<td></td>
+</tr>
+<tr>
+	<td>codificación de caracteres</td>
+	<td> meta charset="UTF-8"</td>
+	<td></td>
+</tr>
+<tr>
+	<td>url</td>
+	<td>
+	scheme://prefix.domain:port/path/filename 
+
+	
+    esquema - define el tipo de servicio de Internet (lo más común es HTTP o HTTPS )
+    prefijo - define un dominio de prefijo (por defecto para HTTP es www )
+    Dominio - define a Internet de nombres de dominio (como w3schools.com)
+    puerto - define el número de puerto en el host (por defecto para http es 80 )
+    ruta - define una ruta en el servidor (Si se omite: el directorio raíz del sitio)
+    nombre de archivo - define el nombre de un documento o recurso
+
+	esquemas
+		http 	HyperText Transfer Protocol 	Common web pages. Not encrypted
+		https 	Secure HyperText Transfer Protocol 	Secure web pages. Encrypted
+		ftp 	File Transfer Protocol 	Downloading or uploading files
+		file
+</td>
+	<td></td>
+</tr>
+<tr>
+	<td>elemtos tipo bloque</td>
+	<td>
+<address>
+<article>
+<aside>
+<blockquote>
+<canvas>
+<dd>
+<div>
+<dl>
+<dt>
+<fieldset>
+<figcaption>
+<figure>
+<footer>
+<form>
+<h1>-<h6>
+<header>
+<hr>
+<li>
+<main>
+<nav>
+<noscript>
+<ol>
+<output>
+<p>
+<pre>
+<section>
+<table>
+<tfoot>
+<ul>
+<video>
+</td>
+	<td></td>
+</tr>
+<tr>
+	<td>elemetos inline</td>
+	<td>
+<a>
+<abbr>
+<acronym>
+<b>
+<bdo>
+<big>
+<br>
+<button>
+<cite>
+<code>
+<dfn>
+<em>
+<i>
+<img>
+<input>
+<kbd>
+<label>
+<map>
+<object>
+<q>
+<samp>
+<script>
+<select> select name="cars" size="3" cantidad de valores visibles
+<small>
+<span>
+<strong>
+<sub>
+<sup>
+<textarea>
+<time>
+<tt>
+<var>
+</td>
+	<td></td>
+</tr>
+<tr>
+	<td>iframe</td>
+	<td> <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+
+<a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a> 
+</td>
+	<td></td>
+</tr>
+</table>
+
+La <noscript> etiqueta se utiliza para proporcionar un contenido alternativo para los usuarios que tienen secuencias de comandos con discapacidad en su navegador o tener un navegador que no admite secuencias de comandos del lado del cliente:
+
+Técnicas de diseño HTML
+
+Hay cuatro maneras diferentes para crear diseños de varias columnas. Cada forma tiene sus ventajas y desventajas:
+
+    tablas HTML
+    propiedad CSS float
+    marco CSS
+    FlexBox CSS
+
+
+</pre>
+

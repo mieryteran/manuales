@@ -1,0 +1,371 @@
+<br>
+JAVASCRIPT
+
+<pre>
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>CONVERTIR A ENTERO</td>
+	<td>parseInt()</td>
+</tr>
+<tr>
+	<td>INNERHTML</td>
+	<td>obj.innerHTML</td>
+</tr>
+<tr>
+	<td>SET INTERVAL</td>
+	<td>setInterval('funcion',tiempo);clearInterval(reloj)</td>
+</tr>
+<tr>
+	<td>SET TIMEOUT</td>
+	<td>setTimeout('funcion',tiempo); clearTimeout(reloj)</td>
+</tr>
+<tr>
+	<td>W3C EVENTOS</td>
+	<td>addEventListener(elemento,'evento',funcion,capture)</td>
+</tr>
+<tr>
+	<td>DETENER EVENTO</td>
+	<td>e.preventDefault();</td>
+</tr>
+<tr>
+	<td>TERNARIO</td>
+	<td>v1 > v2 ? funcion : funcion</td>
+</tr>
+<tr>
+	<td>RECORRER OBJETOS O ARREGLOS</td>
+	<td>
+	Object.keys(datos).forEach(function (key) {
+        var valor = datos[key];
+        });
+    </td>
+</tr>
+</table>
+
+
+METODOS STRING
+
+<table border="1" border="1" width="100%" align="center">
+	<td>TAMANO</td>
+	<td>cadena.length</td>
+	</tr>
+	<tr>
+	<td>MAYUSCULA</td>
+	<td>cadena.toUpperCase()</td>
+	</tr>
+	<tr>
+	<td>MINUSCULA</td>
+	<td>cadena.toLowerCase()</td>
+	</tr>
+	<tr>
+	<td>SUBSTRING</td>
+	<td>cadena.substring(posicioninio,posicionfinal)</td>
+	</tr>
+	<tr>
+	<td>SEARCH</td>
+	<td>cadena.search(patron) != -1</td>
+	</tr>
+	<tr>
+	<td>REPLACE</td>
+	<td>cadena.replace(patron,1)</td>
+	</tr>
+	<tr>
+	<td>SPLIT</td>
+	<td>cadena.split(patron)</td>
+	</tr>
+	<tr>
+	<td>MATCH</td>
+	<td>cadena.match(patron)</td>
+	</td>
+</tr>
+</table>
+
+EVENTOS
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>EVENTO FOCUS</td>
+	<td>onFocus</td>
+	</tr>
+	<tr>
+	<td>EVENTO BLUR</td>
+	<td>onBlur</td>
+	</tr>
+	<tr>
+	<td>EVENTO MOUSEOVER</td>
+	<td>onMouseOver</td>
+	</tr>
+	<tr>
+	<td>EVENTO MOUSEOUT</td>
+	<td>onMouseOut</td>
+	</tr>
+	<tr>
+	<td>EVENTO ONLOAD</td>
+	<td>onLoad</td>
+	</tr>
+	<tr>
+	<td>EVENTO MOUSEDOWN</td>
+	<td>mousedown</td>
+	</tr>
+	<tr>
+	<td>EVENTO MOUSEUP</td>
+	<td>mouseup</td>
+	</tr>
+	<tr>
+	<td>EVENTO MOUSEMOVE</td>
+	<td>mousemove</td>
+	</tr>
+	<tr>
+	<td>EVENTO KEYDOWN</td>
+	<td>keydown</td>
+	</tr>
+	<tr>
+	<td>EVENTO KEYUP</td>
+	<td>keyup</td>
+	</tr>
+	<tr>
+	<td>EVENTO KEYPRESS</td>
+	<td>keypress</td>
+	</tr>
+	<tr>
+	<td>EVENTO CHANGE</td>
+	<td>change</td>
+	</td>
+</tr>
+</table>
+
+
+OBJETO DOCUMENT
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>DOCUMENT BGCOLOR</td>
+	<td>document.bgColor='red'</td>
+</tr>
+<tr>
+	<td>DOCUMENT WRITE</td>
+	<td>document.write()</td>
+</tr>
+<tr>
+	<td>DOCUMENT GETELEMENTBYID</td>
+	<td>document.getElementById('id')</td>
+</tr>
+<tr>
+	<td>DOCUMENT GETELEMENTBYID SELECT</td>
+	<td>document.getElementById('id').seleccion.(selectedIndex,options[seleccion.selectedIndex].text o .value)</td>
+</tr>
+</table>
+
+OBJETO WINDOW
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>WINDOW LOCATION</td>
+	<td>window.location = ''</td>
+</tr>
+<tr>
+	<td>WINDOW GLOBAL</td>
+	<td>window.global = ''</td>
+</tr>
+<tr>
+	<td>WINDOW CONFIRM</td>
+	<td>window.confirm('')</td>
+</tr>
+<tr>
+	<td>WINDOW PROMPT</td>
+	<td>window.prompt('accion','')</td>
+</tr>
+<tr>
+	<td>WINDOW ALERT</td>
+	<td>window.alert('')</td>
+</tr>
+<tr>
+	<td>WINDOW HISTORY ATRAS</td>
+	<td>window.history.back()</td>
+</tr>
+<tr>
+	<td>WINDOW HISTORY ADELANTE</td>
+	<td>window.history.forward()</td>
+</tr>
+<tr>
+	<td>WINDOW HISTORY GO</td>
+	<td>window.history.go(-+1)</td>
+</tr>
+<tr>
+	<td>WINDOW ONLOAD</td>
+	<td>window.onload = funcion</td>
+</tr>
+<tr>
+	<td>WINDOW OPEN</td>
+	<td>
+	var ventana = window.open('archivo.extencion','nombre','parametros')
+	ventana.document.write();
+
+	toolbar = yes|no
+	location = yes|no
+	directories = yes|no
+	status = yes|no
+	menubar = yes|no
+	scrollbars = yes|no
+	resizable = yes|no
+	width = 100
+	hright = 100
+	</td>
+</tr>
+</table>
+
+OBJETO SCREEN
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>ALTO DE PANTALLA EN PX</td>
+	<td>screen.availHeight</td>
+</tr>
+<tr>
+	<td>ANCHO DE PANTALLA EN PX</td>
+	<td>screen.availWidth</td>
+</tr>
+<tr>
+	<td>NUMERO DE BITS COLORES</td>
+	<td>screen.colorDepth</td>
+</tr>
+<tr>
+	<td>ALTURA</td>
+	<td>screen.height</td>
+</tr>
+<tr>
+	<td>ANCHO</td>
+	<td>screen.width</td>
+</tr>
+</table>
+
+OBJETO NAVIGATOR
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>NOMBRE DEL NAVEGADOR</td>
+	<td>navigator.appName</td>
+</tr>
+<tr>
+	<td>VERSION DEL NAVEGADOR</td>
+	<td>navigator.appVersion</td>
+</tr>
+<tr>
+	<td>COOKIES ACTIVAS</td>
+	<td>navigator.cookieEnabled</td>
+</tr>
+<tr>
+	<td>PLATAFORMA DEL NAVEGADOR</td>
+	<td>navigator.platForm</td>
+</tr>
+<tr>
+	<td>PLUGINS CARGADOS</td>
+	<td>navigator.plugins</td>
+</tr>
+</table>
+
+CLASES 
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>CLASE MATCH</td>
+	<td>Match.random()</td>
+</tr>
+<tr>
+	<td>CLASE DATE</td>
+	<td>
+	var fecha = new Date();
+	fecha.getDate();
+	fecha.getMonth();
+	fecha.getFullYear();
+	fecha.getHours();
+	fecha.getSeconds();
+	</td>
+</tr>
+</table>
+
+EXPRESIONES REGULARES
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>EXPRESIONES REGULARES</td>
+	<td>
+	var patron = new RegExp(''):
+	patron.test(cadena)
+	patron.exec(cadena) vec.index retorne posicion vec.input retorna la cadena
+
+	var patron = / /;
+	^ principio de cadena
+	$ final de cadena
+	^hola comienze con hola
+	hola$ termine con hola
+	[ - ] rengo de caracteres permitidos
+	[^ - ] rengo de caracteres distintos
+	{ } cantidades de repeticiones del patron
+	{3,6} si contine entre 3 y 6 
+	{3, } 3 o mas
+	| alternancia
+	a...a caracter punto
+	(\,\d+)? subpatrones (agrupar expresiones)
+
+	]? 0 o 1 ocurrencia
+	]* 0 o mas ocurrencias
+	]+ 1 o mas ocurrencias
+	</td>
+</tr>
+<tr>
+	<td>ABREVIACIONES</td>
+	<td>
+	\d -> [0-9]
+	\d -> [^0-9]
+	\w -> [a-zA-Z0-9]
+	\W -> [^a-zA-Z0-9]
+	\s -> espacio
+	</td>
+</tr>
+<tr>
+	<td>MODIFICADORES</td>
+	<td>
+	/i insentive no diferencia emmtre mayusculas y minusculas
+	/g global los caracteres pueden ser encontrados varias veces
+	/m
+	</td>
+</tr>
+
+<!-- <script type="text/javascript">
+    $(document).ready(iniciarEventos);
+
+    function iniciarEventos(){
+    }
+
+    window.addEventListener('load',comenzarEvento,false);
+    function comenzarEvento(e) {
+    var objJson = {"nombre":"Daniel","apellido":"mier","edad":27};
+    var myObj = {
+      "name":"John",
+      "age":{"daniel":10},
+      "cars":[ "Ford", "BMW", "Fiat" ]
+    };
+    Object.keys(objJson).forEach(function (key) {
+      console.log(key);
+      console.log(objJson[key]);
+    });
+
+    for (x in myObj.cars) {
+      console.log(myObj.cars[x]);
+      document.getElementById("resultado").innerHTML += x+'<br>';
+    } 
+    var cadena = window.prompt('Correo: ','');
+    var patron = /^[a-z]{6,}@(hotmail|gmail).com$/;
+      if (patron.test(cadena)) {
+          window.alert('permitir');
+      } else {
+          window.alert('no permitir');
+      }
+    }
+    </script> -->
+
+}
+} 
+
+</pre>

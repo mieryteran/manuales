@@ -1,0 +1,238 @@
+
+DHTML
+
+VALIDACION DE NAVEGADORES (USABILIDAD)
+
+<pre>
+
+<table border="1" width="100%">
+<tr>
+  <td>IE(INTERNET EXPLORER)</td>
+  <td> MOZ(MOZILA FIREFOX)</td>
+</tr>
+<tr>
+  <td>Window.event</td>
+  <td>e</td>
+<tr>
+  <td>attachEvent()</td>
+  <td>addEventListener()</td>
+</tr>
+<tr>
+  <td>Window.event.srcElement</td>
+  <td>e.target</td>
+</tr>
+<tr>
+  <td>Window.event.KeyCode</td>
+  <td>e.wich</td>
+</tr>
+<tr>
+  <td>Window.event.returnValue=false;</td>
+  <td>e.preventDefault();</td>
+</tr>
+<tr>
+  <td>Window.event.CancellBubble=true;</td>
+  <td>e.stopPropagation();</td>
+</tr>
+<tr>
+  <td>Window.event.detachEvent('evento',funcion);</td>
+  <td>e.removeEventListener('evento',funcion,false);</td>
+</tr>
+<tr>
+</table>
+
+NODOS TEXTO
+
+<table border="1" width="100%">
+<tr>
+  <td>ACCIONES</td>
+  <td>COMANDOS</td>
+</tr>
+<tr>
+  <td>NODO DEL PADRE</td>
+  <td>padre.childNodes, padre.childNodes[0].{nodeValue,nodeType,nodeType,length}</td>
+</tr>
+<tr>
+  <td>NODO PADRE DEL HIJO</td>
+  <td>hijo.parentNode</td>
+</tr>
+<tr>
+  <td>NODO ANTERIOR</td>
+  <td>hijo.previousSibling</td></tr>
+<tr>
+  <td>NODO SIGUIENTE</td>
+  <td>hijo.nextSibling</td>
+</tr>
+<tr>
+  <td>PRIMER NODO</td>
+  <td>padre.firstChild</td>
+</tr>
+<tr>
+  <td>ULTIMO NODO</td>
+  <td>padre.lastChild</td>
+</tr>
+<tr>
+  <td>INSERTAR NODO</td>
+  <td>puntero.appendChild(elemento)</td>
+</tr>
+<tr>
+  <td>REMOVER NODO</td>
+  <td>puntero.removeChild(puntero.childNodes[0],puntero.childNodes.length-1,puntero.lastChild,puntero.firstChild)</td
+</tr>
+<tr>
+  <td>VALIDAR NODOS</td> 
+  <td>puntero.hasChildNodes()</td>
+</tr>
+<tr>
+  <td>INSERTAR NODO DESPUES</td>
+  <td>puntero.insertBefore(elemento,anterior)</td>
+</tr>
+<tr>
+  <td>CLONAR NODOS</td>
+  <td>elemento.cloneNode(true o false)</td>
+</tr>
+</table>
+
+NODO ELEMENTO
+
+<table border="1" width="100%">
+<tr>
+  <td>ACCIONES</td>
+  <td>COMANDOS</td>
+</tr>
+<tr>
+  <td>AGREGAR ATRIBUTO A ELEMENTO</td>
+  <td>elemento.setAttribute('href','url')</td>
+</tr>
+<tr>
+  <td>OBTENER VALOR DE ATRIBUTO DE ELEMENTO</td>
+  <td>elemento.getAttribute('href');</td>
+</tr>
+<tr>
+  <td>REMOVER ATRIBUTO DE ELEMENTO</td>
+  <td>elemento.removeAttribute('href');</td
+</tr>
+<tr>
+  <td>TEXTO NODO</td>  
+  <td>nodeValue = texto del nodo</td>
+</tr>
+<tr>
+  <td>TIPO NODO</td>
+  <td>nodeType = 1 (tipo tag), 3 (tipo text)</td>
+</tr>
+<tr>
+  <td>TIPO FORMA NODO</td>
+  <td>nodeName = texto: #texto , elemento : <a> etc.</td>
+</tr>
+<tr>
+</table>
+
+OBJETOS DOCUMENT
+
+<table border="1" width="100%">
+<tr>
+  <td>ACCIONES</td>
+  <td>COMANDOS</td>
+</tr>
+  <td>OBTENER REFERENCIA DEL OBJETO POR ID</td>
+  <td>document.getElementById();</td>
+</tr>
+<tr>
+  <td>OBTENER REFERENCIA DEL OBJETO POR TAG</td>
+  <td>document.getElementByTagName()</td>
+</tr>
+<tr>
+  <td>OBTENER REFERENCIA DEL OBJETO POR CLASES</td>
+  <td>document.getElementsByClassName("city")</td>
+</tr>
+<tr>
+  <td>CREAR NODO TEXTO</td>
+  <td>document.createTextNode()</td>
+</tr>
+<tr>
+  <td>CREAR NODO ELEMENTO</td>
+  <td>document.createElement()</td
+</tr>
+</table>
+
+CODES KEY
+
+<table border="1" width="100%">
+<tr>
+  <td>ACCIONES</td>
+  <td>COMANDOS</td>
+</tr>
+<tr>
+  <td>ACCION ANTES DEL EVENTO ALT</td>  
+  <td>e.altKey</td>
+</tr>
+<tr>
+  <td>ACCION ANTES DEL EVENTO CTRL</td>
+  <td>e.ctrlKey</td>
+</tr>
+<tr>
+  <td>ACCION ANTES DEL EVENTO SHIF</td>
+  <td>e.shiftKey</td>
+</tr>
+<tr>
+  <td>TIPO DE EVENTO</td>
+  <td>e.type </td>
+</tr>
+<tr>
+  <td>EVENTO REFERENCIANDO OBJETO</td>
+  <td>e.target</td>
+</tr>
+<tr>
+  <td>EVENTO CODIGO DEL TECLADO</td>
+  <td>e.KeyCode</td>
+</tr>
+<tr>
+  <td>EVENTO </td>
+  <td>e.wich</td>
+</tr>
+<tr>
+  <td>EVENTO COORDENADAS X</td>
+  <td>e.clientX</td>
+</tr>
+<tr>
+  <td>EVENTO COORDENADAS EN Y</td>
+  <td>e.clientY</td>
+</tr>
+<tr>
+  <td>EVENTO </td>
+  <td>e.screenX</td>
+</tr>
+<tr>
+  <td>EVENTO </td>
+  <td>e.screenY</td>
+</tr>
+<tr>
+  <td>EVENTO </td>
+  <td>e.pageX</td>
+</tr>
+<tr>
+  <td>EVENTO </td>
+  <td>e.pageY</td>
+</tr>
+<tr>
+  <td>EVENTO </td>
+  <td>window.pageYOffset</td>
+</tr>
+<tr>
+  <td>EVENTO SCROLL TOP</td>
+  <td>document.body.scrollTop;</td>
+</tr>
+<tr>
+  <td>EVENTO ESCROLL LEFT</td>
+  <td>document.body.scrollLeft;</td>
+</tr>
+<tr>
+  <td>CONVERTIR </td>
+  <td>String.formCharCode();</td>
+</tr>
+<tr>
+  <td>EVENTO DESPUES DE SALIR DE LA PAGINA</td>
+  <td>ounload</td>
+</tr>
+</table>
+
+</pre>

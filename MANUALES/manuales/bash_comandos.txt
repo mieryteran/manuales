@@ -1,0 +1,462 @@
+COMANDOS BASH
+
+<pre>
+<table border="1" border="1" width="100%" align="center">
+<tr>
+<td>ACCIONES</td><td>COMANDOS</td>
+</tr>
+<tr>
+<td>INSTALAR GIT</td><td>sudo aptitude install git-core</td>
+</tr>
+<tr>
+<td>CREAR NUEVO REPOSITORIO</td><td>git init</td>
+</tr>
+<tr>
+<td>CLONAR REPOSITORIO</td><td>git clone git://url carpeta_crear</td>
+</tr>
+<tr>
+<td>ACTUALIZAR</td><td>git pull -v </td>
+</tr>
+<tr>
+<td>AGREGAR NUEVO</td><td>git add .</td>
+</tr>
+<tr>
+<td>CAMBIO LOCAL</td><td>git commit -m "COMENTARIO"</td>
+</tr>
+<tr>
+<td>GUARDAR</td><td>git push origin(referencia del repositorio) master(rama)</td>
+</tr>
+<tr>
+<td>CAMBIOS</td><td>git diff</td>
+</tr>
+<tr>
+<td>REPOSITORIOS Y URL</td><td>git remote -v</td>
+</tr>
+<tr>
+<td>AGREGAR REPOSITORIOS REMOTOS</td><td>git remote add NOMBRE git://github.com/..git</td>
+</tr>
+<tr>
+<td>RECUPERAR DATOS DE REPOSITORIOS REMOTOS</td><td>git fetch NOMBRE</td>
+</tr>
+<tr>
+<td>INFORMACION DE REPOSITORIOS REMOTOS</td><td>git remote show origin</td>
+</tr>
+<tr>
+<td>RENOMBRAR REFERENCIA DE REPOSITORIOS REMOTOS</td><td>git remote rename este poreste</td>
+</tr>
+<tr>
+<td>CONECTAR REPOSITORIO CON OTRO REPOSITORIO REMOTO</td><td>git remote add origin <server>/td>
+</tr>
+</table>
+
+cambiar de heerramienta de versionado
+
+cd /home/daniel/www/sistemas/punto_venta; git remote set-url origin https://LDMieryTeran@bitbucket.org/developersvzla/arauca.git; git remote set-url --push origin https://LDMieryTeran@bitbucket.org/developersvzla/arauca.git
+
+git remote rm NOMBRE
+eliminar una referencia 
+
+git branch --set-upstream-to=origin/<branch> master configurar el pull y el push automatico
+
+git log : mirar atrás para ver qué modificaciones se han llevado a cabo
+        -p muestar los cambios tambien
+        -2 solo las 2 ultimas entradas 
+
+git reset HEAD <file>
+para sacar un archivo del área de preparación
+
+
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+
+Estos tres comandos acabarán convirtiéndose en una única confirmación —la segunda confirmación reemplazará los resultados de la primera.
+
+
+
+Crea una nueva rama llamada "feature_x" y cámbiate a ella usando
+git checkout -b feature_x
+vuelve a la rama principal
+git checkout master
+y borra la rama
+git branch -d feature_x
+Una rama nueva no estará disponible para los demás a menos que subas (push) la rama a tu repositorio remoto
+git push origin <branch>
+
+Para fusionar otra rama a tu rama activa (por ejemplo master), utiliza
+git merge <branch>
+
+Se recomienda crear etiquetas para cada nueva versión publicada de un software. Este concepto no es nuevo, ya que estaba disponible en SVN. Puedes crear una nueva etiqueta llamada 1.0.0 ejecutando
+git tag 1.0.0 1b2e1d63ff 
+o $ git tag -a v1.4 -m 'my version 1.4'
+1b2e1d63ff se refiere a los 10 caracteres del commit id al cual quieres referirte con tu etiqueta. Puedes obtener el commit id con
+git log
+también puedes usar menos caracteres que el commit id, pero debe ser un valor único. 
+
+VIRTUAL HOSTING
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+<td>ACCIONES</td><td>COMANDOS</td>
+</tr>
+<tr>
+<td>php5</td><tdaptitude install php5</td>
+</tr>
+<tr>
+<td>permisos (todos)</td><td>chmod -R 777 carpeta www / chown -R www-data:www-data</td>
+</tr>
+<tr>
+<td>permisos al propetiaro root</td><td>sudo chown -R www</td>
+</tr>
+<tr>
+<td>COPIAR ARCHIVO DEFAULT.CONF</td><td>sudo cp /etc/apache2/sites-available/default.conf /etc/apache2/sites-available/nombre.conf</td>
+</tr>
+<tr>
+<td>MODIFICAR ARCHIVO NOMBRE.CONF</td>
+<td>
+nombre{ 
+VirtualHost *:2008>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /home/daniel/www/sistemas/punto_venta/app/webroot
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride All
+        </Directory>
+        <Directory /home/daniel/www/sistemas/punto_venta/app/webroot/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Require all granted
+        </Directory>
+/VirtualHost>}
+</td>
+</tr>
+<tr>
+<td>MODIFICAR ARCHIVO DEFAULT.CONF</td>
+<td>
+default{
+VirtualHost *:80>
+        # The ServerName directive sets the request scheme, hostname and port that
+        # the server uses to identify itself. This is used when creating
+        # redirection URLs. In the context of virtual hosts, the ServerName
+        # specifies what hostname must appear in the request's Host: header to
+        # match this virtual host. For the default virtual host (this file) this
+        # value is not decisive as it is used as a last resort host regardless.
+        # However, you must set it for any further virtual host explicitly.
+        #ServerName www.example.com
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /home/daniel/www
+
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride All
+        </Directory>
+        <Directory /home/daniel/www/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Require all granted
+        </Directory>
+
+        # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+        # error, crit, alert, emerg.
+        # It is also possible to configure the loglevel for particular
+        # modules, e.g.
+        #LogLevel info ssl:warn
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        # For most configuration files from conf-available/, which are
+        # enabled or disabled at a global level, it is possible to
+        # include a line for only one particular virtual host. For example the
+        # following line enables the CGI configuration for this host only
+        # after it has been globally disabled with "a2disconf".
+        #Include conf-available/serve-cgi-bin.conf
+/VirtualHost>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet }
+</td>
+</tr>
+<tr>
+<td>ACTIVAR SITIOS / DESABILITAR SITIOS</td><td>sudo a2ensite nombre.conf / sudo a2dissite nombre.conf</td>
+</tr>
+<tr>
+<td>AGREGAR PUERTO</td>
+<td>sudo gedit /etc/apache2/ports.conf [ Listen 2008 #nombre del proyecto]</td>
+</tr>
+<tr>
+<td>VER MODULOS ACTIVOS</td><td>ls /etc/apache2/mods-enabled/ </td>
+</tr>
+<tr>
+<td>ACTIVAR MODULO REWRITE</td><td>sudo a2enmod rewrite</td>
+</tr>
+<tr>
+<td>ACTIVAR MODULO USERDIR</td><td>sudo a2enmod userdir</td>
+</tr>
+<tr>
+<td>REINICIAR APACHE</td><td>sudo service apache2 restart</td>
+</tr>
+</table>
+
+COMANDOS
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+<td>PROGRAMAS EN EJECUCION</td><td>htop</td>
+</tr>
+<tr>
+<td>CONTROL DE PROCESOS(BUSCAR)</td><td>ps -A | grep firefox</td>
+</tr>
+<tr>
+<td>CONTROL DE PROCESOS(BUSCAR DETALLADO)</td><td>ps aux | grep firefox</td>
+</tr>
+<tr>
+<td>OBTENER ID DE PROCESO</td><td>pgrep firefox</td>
+</tr>
+<tr>
+<td>TERMINAR PROCESO</td><td>kill:</td>
+</tr>
+<tr>
+<td>AGREGAR REPOSITORIO</td><td>sudo add-apt-repository ppa:[nombre del repositorio]</td>
+</tr>
+<tr>
+<td>COMPARTIR ARCHIVOS</td><td>scp -r carpeta usurio@ip:. //coloca en home</td>
+</tr>
+<tr>
+<td>ACTUALIZAR REPOSITORIO</td><td>update</td>
+</tr>
+<tr>
+<td>ACTUALIZAR INSTALADOS</td><td>safe-upgrade </td>
+</tr>
+<tr>
+<td>ARREGLAR ERROR DE PHP</td><td>sudo nano /etc/php5/apache2/php.ini [ short_open_tag = On ]</td>
+</tr>
+<tr>
+<td>ELIMINAR PROGRAMA</td><td>sudo aptitude remove "P" --purgue, sudo aptitude remove "P", sudo purgue aptitude  "P" <br> sudo aptitude autoremove</td>
+</tr>
+<tr>
+<td>EJECUTA PROCESOS PERIODICAMENTE</td><td>watch -n numero de segundos</td>
+</tr>
+<tr>
+<td>PROCESOS</td><td>ps procesos -aux servidor</td>
+</tr>
+<tr>
+<td>BUSCADOR</td><td>grep buscador</td>
+</tr>
+<tr>
+<td>MONITORIAR PROCESOS</td><td>watch -n 1 'ps aux | grep postgres'</td>
+</tr>
+<tr>
+<td>VER DISCOS Y CAPACIDAD</td><td>df -h</td>
+</tr>
+</table>
+
+PROGRAMAS NECESARIOS
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+<td>COMPARTIR DATOS SEGURO</td><td>ssh</td>
+</tr>
+<tr>
+<td>BD POSTGRES</td><td>Pgadmin3</td>
+</tr>
+<tr>
+<td>PHP POSTGRES</td><td>PHP-pgsql,PHP-sd</td>
+</tr>
+<tr>
+<td>BD MYSQL</td><td>PHPmyadmin</td>
+</tr>
+<tr>
+<td>PHP</td><td>php</td>
+</tr>
+</table>
+
+
+cambiar fondo de pantalla -> gsettings set org.gnome.desktop.background picture-uri "file:///home/daniel/Descargas/mrrobot.png"
+
+
+1 cambiar fondo de pantalla -> gsettings set org.gnome.desktop.background picture-uri "file:///home/juan/Música/mrrobot.png"
+2 mplayer *.mp3
+
+para saber que usuarios ahi en el sistema 
+cat lee y concatena archivos
+#cat /etc/passwd
+
+para saber los grupos
+
+#cat /etc/group
+
+
+para saber info hacerca de un user 
+finger informacion sobre usuarios
+#finger user
+
+si fueras root pues en redhat ahi algo llamado :
+
+#redhat-config-users
+
+; <- comentarios en bash
+
+symfony
+
+instalar composer globalmnete
+
+$ curl -sS https://getcomposer.org/installer | php
+$ sudo mv composer.phar /usr/local/bin/composer
+
+php bin/console --version
+ php bin/console server:run <- correr servidor interno 
+ http://localhost:8000/config.php <- comprobar configuracion
+ o php bin/symfony_requirements
+
+ instalar componente 
+
+ composer require symfony/finder
+
+ actualizar dependencias
+
+ composer update
+
+ composer update <- actualizar librerias (hacerlo con frecuencia)
+  php bin/console security:check <- revisar seguridad 
+
+¿Qué otros servicios puede escribir? Para verlos, utilice el debug:containercomando console:
+  php bin/console debug:container --types
+
+  Si agrega una plantilla en una nueva ubicación, puede que tenga que borrar la caché ( php bin/console cache:clear), incluso si está en modo de depuración.
+
+  Referencia de configuración (config.yml)
+
+  Por ejemplo, si desea configurar algo en Twig, puede ver un ejemplo de volcado de todas las opciones de configuración disponibles ejecutando:
+
+ php bin/console config:dump-reference twig
+
+ obtener una lista de sugerencias de tipo auto-dirigibles ejecutando:
+
+  php bin/console debug:container --types
+
+estructura 
+
+
+app/
+Contiene cosas como configuración y plantillas. Básicamente, todo lo que no es código PHP va aquí.
+src/
+Su código PHP vive aquí.
+99% del tiempo, usted estará trabajando en src/(archivos PHP) o app/(todo lo demás). A medida que siga leyendo, aprenderá qué se puede hacer dentro de cada uno de estos.
+
+¿Qué pasa con los otros directorios del proyecto?
+
+bin/
+El bin/consolearchivo famoso vive aquí (y otros archivos ejecutables menos importantes).
+tests/
+Las pruebas automatizadas (por ejemplo, pruebas de unidad) para su aplicación viven aquí.
+var/
+Aquí se almacenan archivos creados automáticamente, como archivos de caché ( var/cache/), logs ( var/logs/) y sesiones ( var/sessions/).
+vendor/
+Bibliotecas de terceros (es decir, "vendedor") viven aquí! Estos se descargan a través del gestor de paquetes de Composer .
+web/
+Ésta es la raíz del documento para su proyecto: coloque aquí cualquier archivo públicamente accesible (por ejemplo, CSS, JS e imágenes).
+
+doctrine
+
+el siguiente comando puede generar automáticamente una test_project base de datos vacía para usted:
+
+ php bin/console doctrine:database:create
+
+ eliminar base datos
+
+ php bin/console doctrine:database:drop --force
+
+ creara entidades simples
+
+ php bin/console doctrine:generate:entity
+
+Después de crear sus entidades, debe validar las asignaciones con el siguiente comando:
+
+ php bin/console doctrine:schema:validate
+
+ crear automáticamente todas las tablas de base de datos necesarias para cada entidad conocida en su aplicación. Para ello, ejecute:
+
+ php bin/console doctrine:schema:update --force
+
+
+se recomienda esta codificacion de datos
+ charset: utf8mb4
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+
+crear proyecto symfony
+
+composer create-project symfony/framework-standard-edition my_project_name
+composer create-project symfony/framework-standard-edition my_project_name "2.8.*"
+cd my_project_name/
+ php bin/console server:run
+
+
+ resolver problemas de permisos
+
+ HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
+ sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:$(whoami):rwX var
+ sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:$(whoami):rwX var
+
+ composer globalmente
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+rutas
+
+  /**
+     * Matches /blog exactly
+     *
+     * @Route("/blog", name="blog_list")
+     */
+
+/**
+     * Matches /blog/*
+     *
+     * @Route("/blog/{slug}", name="blog_show")
+     */
+
+/**
+ * @Route("/blog/{page}", name="blog_list", requirements={"page": "\d+"})
+ */
+
+/**
+     * @Route(
+     *     "/articles/{_locale}/{year}/{slug}.{_format}",
+     *     defaults={"_format": "html"},
+     *     requirements={
+     *         "_locale": "en|fr",
+     *         "_format": "html|rss",
+     *         "year": "\d+"
+     *     }
+     * )
+     */
+    
+/articles/en/2010/my-post
+/articles/fr/2010/my-post.rss
+/articles/en/2013/my-latest-post.html
+
+Parámetros especiales de enrutamiento 
+
+_controller
+Como se ha visto, este parámetro se utiliza para determinar qué controlador se ejecuta cuando se compara la ruta.
+_format
+Se utiliza para configurar el formato de solicitud ( leer más ).
+_fragment
+Se utiliza para establecer el identificador de fragmento, la última parte opcional de una URL que comienza con un #carácter y se utiliza para identificar una parte de un documento.
+_locale
+Se utiliza para establecer la configuración regional en la solicitud
+
+errores 404
+
+ if (!$product) {
+        throw $this->createNotFoundException('The product does not exist');
+    }
+
+
+</pre>

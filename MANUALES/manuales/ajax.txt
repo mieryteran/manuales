@@ -1,0 +1,135 @@
+<br>
+AJAX
+
+<pre>
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>ON READY STATE CHANGE</td>
+	<td>conexion.onreadystatechange = procesarEventos;</td>
+</tr>
+<tr>
+	<td>OPEN</td>
+	<td>conexion.open('GET o POST','url',true o false);</td>
+</tr>
+<tr>
+	<td>SEND POST</td>
+	<td>
+	var nom = document.getElementById('nombre'); 	
+	var cad = 'nombre='+encodeURIComponent(nom); 
+	conexion.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+	</td>
+</tr>
+<tr>
+	<td>SEND</td>
+	<td>conexion.send(null,funcion(),'nombre='+valor+'&apellido='+valor2');</td>
+</tr>
+<tr>
+	<td>RESPONSE TEXT</td>
+	<td>conexion.responseText</td>
+</tr>
+<tr>
+	<td>RESPONSE XML</td>
+	<td>conexion.responseXML</td>
+</tr>
+<tr>
+	<td>STATUS</td>
+	<td>conexion.status == 200 o 404</td>
+</tr>
+<tr>
+	<td>STATUS TEXT</td>
+	<td>conexion.statusText</td>
+</tr>
+<tr>
+	<td>ABORT</td>
+	<td>conexion.abort()</td>
+</tr>
+<tr>
+	<td>READY STATE</td>
+	<td>
+	conexion.readyState
+
+    0 No inicializado (el método open no a sido llamado)
+    1 Cargando (se llamó al método open)
+    2 Cargado (se llamó al método send y ya tenemos la cabecera de la petición HTTP y el status)
+    3 Interactivo (la propiedad responseText tiene datos parciales)
+    4 Completado (la propiedad responseText tiene todos los datos pedidos al servidor)
+
+	</td>
+</tr>
+</table>
+
+ADD EVENT
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>FUNCION ADDEVENT</td>
+	<td>
+	function addEvent(elemento,evento,funcion,capture)
+	{
+		if(elemento.attachEvent){
+		elemento.attachEvent('on'+evento,funcion);
+		return true;
+		}else if(elemento.addEventListener){
+		elemento.addEventListener(evento,funcion,capture);
+		return true;
+		}else{
+		return false;
+		}
+	}
+	</td>
+</tr>
+</table>
+
+XML HTTP REQUEST
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+<td>FUNCION CREAR XML HTTP REQUEST</td>
+	<td>
+	function crearXMLHttpRequest()
+	{
+		var xmlHttp=null;
+		if(window.ActiveXObject){
+		xmlHttp = new ActiveXObject("Microsoft/XMLHTTP");
+		}else if(window.XMLHttpRequest){
+		xmkHttp = new XMLHttpRequest();
+		}
+		return xmlHttp;
+	}
+	</td>
+</tr>
+</table>
+
+JSON PHP
+
+<table border="1" border="1" width="100%" align="center">
+<tr>
+	<td>OBJETO JSON</td>
+	<td>
+	$json = new Services_JSON();
+	$cad = $json->encode($vec); ->codificar a JSON
+	$cad = $json->decoded(stripslashes($_REQUEST['nombre']); ->decodificar JSON
+	$cad->nombre;
+
+	</td>
+</tr>
+<tr>
+	<td>JSON</td>
+	<td>
+	var cad = {
+		'nombre':'daniel',
+		'apellido':'palacios',
+		'edad':25,
+		'datos':['25','1.80']
+	}
+
+	$cad = eval("("+conexion.responseText+")");
+	$cad = conexion.responseText.parseJSON();
+
+	</td>
+</tr>
+</table>
+
+</pre>
